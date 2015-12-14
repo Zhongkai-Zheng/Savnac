@@ -1,0 +1,33 @@
+<template name="assignments">
+	{{> dropzone}}
+
+	{{#each images}}
+	{{> image}}
+	{{/each}}
+
+
+	{{#each subscription}}
+	{{#with course}}
+	<h2>{{name}}</h2>
+	<ul>
+		{{#each courseAssignment}}
+		<li class="{{clickedAssignment}} clickable assignment">{{name}} <i>({{ownerEmail}})</i></li>
+		{{/each}}
+	</ul>
+	{{/with}}
+	{{/each}}
+
+	<form>
+		<select name="courseSelect" required>
+			<option disabled selected>pick a course</option>
+			{{#each selectCourse}}
+			<option value="{{_id}}">{{name}}</option>
+			{{/each}}
+		</select>
+		<input type="text" name="assignmentName" autocomplete="off" required>
+		<input type="submit" value="Add Assignment">
+		<button type="button" id="removeAssignment">Remove Assignment</button>
+
+	</form>
+
+</template>

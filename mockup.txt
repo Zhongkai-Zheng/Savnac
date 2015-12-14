@@ -1,0 +1,18 @@
+// assignments
+{
+	"name": "Read Book",
+	"owner": "owner_id",
+	"course": "course_id"
+}
+
+// courses
+{
+	"name": "English 101",
+	"teacher": "teacher_id"
+}
+
+// subscriptions
+{
+	"target": "user_id",
+	"course": "course_id"
+}

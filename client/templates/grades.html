@@ -1,0 +1,16 @@
+<template name="grades">
+	<table style="width:100%">
+	    {{#each grade}}
+	    	<tr>
+	        	<td class="grade {{selectedClass}}">{{name}} {{owner}}</td>
+	    	</tr>
+	    {{/each}}
+	</table>
+
+	<form>
+		<input type="text" name="gradeName">
+		<input type="submit" value="Add Grade">
+		<input type="button" class="remove" value="Remove Grade">
+	</form>
+	
+</template>

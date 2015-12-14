@@ -1,0 +1,15 @@
+<template name="announcements">
+		<table style="width:100%">
+	    {{#each announcement}}
+	    	<tr>
+	        	<td class="announcement {{selectedClass}}">{{name}} {{owner}}</td>
+	    	</tr>
+	    {{/each}}
+	</table>
+
+	<form>
+		<input type="text" name="announcementName">
+		<input type="submit" value="Add Announcement">
+		<input type="button" class="remove" value="Remove Announcement">
+	</form>
+</template>

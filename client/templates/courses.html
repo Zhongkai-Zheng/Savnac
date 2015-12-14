@@ -1,0 +1,36 @@
+<template name="courses">
+	<select>
+  		<option value="--choose category--" disabled selected>--choose category--</option>
+  		<option value="art">Art</option>
+  		<option value="math-and-computer-science">Math and Computer Science</option>
+  		<option value="science">Science</option>
+  		<option value="humanities">Humanities</option>
+  		<option value="english">English</option>
+  		<option value="languages">Languages</option>
+	</select>
+
+	<select>
+  		<option value="--choose teacher--" disabled selected>--choose teacher--</option>
+  		<option value="art">Arthur Art</option>
+  		<option value="math-and-computer-science">Matthew Bardoe Math</option>
+  		<option value="science">Syrus Science</option>
+  		<option value="humanities">Hugo Humanities</option>
+  		<option value="english">Edward English</option>
+  		<option value="languages">Lanphier Languages</option>
+	</select>
+
+		<table style="width:100%">
+	    {{#each course}}
+	    	<tr class="{{subscribedColor}} course">
+	    		{{name}}<br>
+	    		{{teacherEmail}}
+	    	</tr>
+	    {{/each}}
+	</table>
+
+	<form>
+		<input type="text" name="courseName">
+		<input type="submit" value="Add Course">
+	</form>
+
+</template>
